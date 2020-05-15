@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.shayandaneshvar.Controller">
+    <right>
+        <AnchorPane prefHeight="421.0" prefWidth="249.0" style="-fx-background-color: #142850;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="#00a8cc" layoutX="19.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Polygon Triangulation" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial" size="22.0" />
+                    </font>
+                </Text>
+                <JFXTextField focusColor="#27496d" layoutX="38.0" layoutY="137.0" onKeyPressed="#handleKeyPressed" prefHeight="31.0" prefWidth="80.0" promptText="X:" style="-fx-background-color: #0c7b93;" unFocusColor="#00a8cc" fx:id="xField">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font></JFXTextField>
+                <JFXTextField fx:id="yField" focusColor="#27496d" layoutX="133.0" layoutY="137.0" onKeyPressed="#handleKeyPressed" prefHeight="31.0" prefWidth="80.0" promptText="Y:" style="-fx-background-color: #0c7b93;" unFocusColor="#00a8cc">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font></JFXTextField>
+                <JFXButton buttonType="RAISED" layoutX="112.0" layoutY="225.0" onMouseClicked="#addCoordinate" prefHeight="48.0" prefWidth="118.0" ripplerFill="#0c7b93" style="-fx-background-color: #27496d;" text="Add Coordinate" textFill="#00a8cc" />
+                <JFXButton buttonType="RAISED" layoutX="19.0" layoutY="311.0" onMouseClicked="#triangulate" prefHeight="48.0" prefWidth="212.0" ripplerFill="#0c7b93" style="-fx-background-color: #27496d;" text="Triangulate" textFill="#00a8cc" />
+                <ImageView fitHeight="57.0" fitWidth="61.0" layoutX="35.0" layoutY="221.0" onMouseClicked="#reset" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/reset.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </right>
+    <center>
+        <AnchorPane fx:id="drawPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #27496d;" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>
